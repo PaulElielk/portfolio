@@ -45,14 +45,14 @@ export function About() {
           viewport={{ once: true, margin: "-100px" }}
           variants={fadeInUp}
           custom={1}
-          className="text-2xl sm:text-3xl md:text-4xl font-bold mb-12 tracking-tight"
+          className="mb-6 text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl"
         >
           {t.about.title}
         </motion.h2>
 
-        <div className="grid md:grid-cols-5 gap-12 items-start">
+        <div className="grid items-start gap-8 md:grid-cols-5 lg:gap-12">
           {/* Text Content - 3 columns */}
-          <div className="md:col-span-3 space-y-6">
+          <div className="space-y-5 md:col-span-3">
             {[t.about.p1, t.about.p2, t.about.p3].map((paragraph, index) => (
               <motion.p
                 key={index}
@@ -61,7 +61,7 @@ export function About() {
                 viewport={{ once: true, margin: "-100px" }}
                 variants={fadeInUp}
                 custom={index + 2}
-                className="text-[var(--text-secondary)] leading-relaxed text-sm sm:text-base"
+                className="text-sm leading-relaxed text-[var(--text-secondary)] sm:text-base"
               >
                 {paragraph}
               </motion.p>
@@ -69,7 +69,7 @@ export function About() {
           </div>
 
           {/* Stats - 2 columns */}
-          <div className="md:col-span-2 space-y-4">
+          <div className="space-y-3.5 md:col-span-2 md:-mt-20">
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -78,17 +78,19 @@ export function About() {
                 viewport={{ once: true, margin: "-100px" }}
                 variants={fadeInUp}
                 custom={index + 3}
-                className="glass-card rounded-xl p-5 flex items-center gap-4"
+                className="glass-card flex items-center gap-5 rounded-2xl pl-7 pr-6 py-6"
               >
-                <div className="w-11 h-11 rounded-lg flex items-center justify-center shrink-0"
-                  style={{ background: "rgba(16, 185, 129, 0.1)" }}>
+                <div
+                  className="flex h-[3.25rem] w-[3.25rem] shrink-0 items-center justify-center rounded-2xl"
+                  style={{ background: "rgba(16, 185, 129, 0.1)" }}
+                >
                   <stat.icon size={20} className="text-[var(--accent-emerald)]" />
                 </div>
                 <div>
-                  <div className="text-xl font-bold text-[var(--text-primary)]">
+                  <div className="text-2xl font-bold text-[var(--text-primary)]">
                     {stat.value}
                   </div>
-                  <div className="text-xs text-[var(--text-muted)]">
+                  <div className="mt-1 text-sm text-[var(--text-muted)]">
                     {stat.label}
                   </div>
                 </div>

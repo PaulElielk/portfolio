@@ -60,13 +60,13 @@ export function Projects() {
           viewport={{ once: true, margin: "-100px" }}
           variants={fadeInUp}
           custom={2}
-          className="text-[var(--text-secondary)] max-w-[600px] mb-12 text-sm sm:text-base"
+          className="mb-10 max-w-[600px] text-sm text-[var(--text-secondary)] sm:text-base"
         >
           {t.projects.subtitle}
         </motion.p>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:gap-7">
           {t.projects.items.map((project, index) => (
             <motion.article
               key={project.name}
@@ -75,15 +75,15 @@ export function Projects() {
               viewport={{ once: true, margin: "-100px" }}
               variants={fadeInUp}
               custom={index + 3}
-              className="glass-card rounded-2xl overflow-hidden group flex flex-col"
+              className="glass-card group flex h-full flex-col overflow-hidden rounded-[1.75rem] box-border"
             >
               {/* Project Header */}
-              <div className="p-6 pb-0">
-                <div className="flex items-start justify-between mb-4">
+              <div className="p-6 pb-0 sm:p-8 sm:pb-0 box-border">
+                <div className="mb-5 flex items-start justify-between gap-4">
                   <h3 className="text-lg font-semibold text-[var(--text-primary)] group-hover:text-[var(--accent-emerald-light)] transition-colors leading-tight">
                     {project.name}
                   </h3>
-                  <div className="flex items-center gap-2 shrink-0 ml-3">
+                  <div className="ml-2 flex shrink-0 items-center gap-2">
                     <a
                       href={project.github}
                       target="_blank"
@@ -109,26 +109,26 @@ export function Projects() {
               </div>
 
               {/* Problem Solved */}
-              <div className="px-6 pb-4 flex-grow">
-                <div className="mb-3">
+              <div className="flex-grow p-6 pb-5 sm:p-8 sm:pt-6 box-border">
+                <div className="mb-3.5">
                   <span className="text-[0.65rem] font-semibold tracking-[0.15em] uppercase text-[var(--accent-emerald)] opacity-70">
                     {t.projects.problemSolved}
                   </span>
                 </div>
-                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                <p className="text-sm leading-relaxed text-[var(--text-secondary)]">
                   {project.problem}
                 </p>
               </div>
 
               {/* Features */}
-              <div className="px-6 pb-4">
-                <ul className="space-y-1.5">
+              <div className="p-6 pb-5 pt-0 sm:p-8 sm:pt-0 sm:pb-6 box-border">
+                <ul className="space-y-2">
                   {project.features.map((feature) => (
                     <li
                       key={feature}
-                      className="text-xs text-[var(--text-muted)] flex items-center gap-2"
+                      className="flex items-start gap-2 text-xs leading-relaxed text-[var(--text-muted)]"
                     >
-                      <span className="w-1 h-1 bg-[var(--accent-emerald)] rounded-full shrink-0" />
+                      <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-[var(--accent-emerald)]" />
                       {feature}
                     </li>
                   ))}
@@ -136,8 +136,8 @@ export function Projects() {
               </div>
 
               {/* Tech Stack */}
-              <div className="px-6 pb-6 pt-2 border-t border-[var(--border-subtle)] mt-auto">
-                <div className="flex flex-wrap gap-2 mt-4">
+              <div className="mt-auto border-t border-[var(--border-subtle)] p-6 sm:p-8 box-border">
+                <div className="mt-0 flex flex-wrap gap-2">
                   {project.tech.map((tech) => (
                     <span key={tech} className="tech-badge">
                       {tech}

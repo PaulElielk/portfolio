@@ -11,8 +11,8 @@ export function LanguageToggle() {
     <motion.button
       whileTap={{ scale: 0.95 }}
       onClick={toggleLanguage}
-      className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium border transition-all duration-300 cursor-pointer
-        border-[var(--border-subtle)] text-[var(--text-secondary)] hover:text-[var(--accent-emerald-light)] hover:border-[var(--border-accent)] bg-white/[0.03] hover:bg-white/[0.06]"
+      className="flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium border transition-all duration-300 cursor-pointer
+        border-[var(--border-subtle)] text-[var(--text-secondary)] hover:text-[var(--accent-emerald-light)] hover:border-[var(--border-accent)] bg-white/[0.03] hover:bg-white/[0.06] leading-normal"
       aria-label="Toggle language"
     >
       <Languages size={14} />

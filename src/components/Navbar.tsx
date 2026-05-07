@@ -41,10 +41,10 @@ export function Navbar() {
         isScrolled ? "glass py-3" : "py-5 bg-transparent"
       }`}
     >
-      <nav className="max-w-[1200px] mx-auto px-4 sm:px-6 flex items-center justify-between">
+      <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-5 sm:px-6 lg:px-8">
         {/* Logo */}
-        <a href="#hero" className="relative group flex items-center gap-2">
-          <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-emerald-500 to-blue-500 flex items-center justify-center text-white font-bold text-sm">
+        <a href="#hero" className="relative group flex items-center gap-3">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-emerald-500 to-blue-500 text-sm font-bold text-white">
             PK
           </div>
           <span className="text-[var(--text-primary)] font-semibold text-lg hidden sm:block">
@@ -53,12 +53,12 @@ export function Navbar() {
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-1">
+        <div className="hidden items-center gap-2 md:flex">
           {navLinks.map((link) => (
             <a
               key={link.key}
               href={link.href}
-              className="px-3 py-2 text-sm text-[var(--text-secondary)] hover:text-[var(--accent-emerald-light)] transition-colors duration-200 rounded-lg hover:bg-white/[0.03]"
+              className="rounded-xl px-3.5 py-2.5 text-sm text-[var(--text-secondary)] transition-colors duration-200 hover:bg-white/[0.03] hover:text-[var(--accent-emerald-light)]"
             >
               {t.nav[link.key as keyof typeof t.nav]}
             </a>
@@ -66,7 +66,7 @@ export function Navbar() {
         </div>
 
         {/* Right Side */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-4">
           <LanguageToggle />
 
           {/* Mobile Menu Button */}

@@ -10,7 +10,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative flex min-h-screen items-center justify-center overflow-hidden pt-24 sm:pt-28"
     >
       {/* Background Effects */}
       <div className="absolute inset-0">
@@ -29,15 +29,15 @@ export function Hero() {
         />
       </div>
 
-      <div className="relative z-10 max-w-[900px] mx-auto px-4 sm:px-6 text-center">
+      <div className="relative z-10 mx-auto max-w-[980px] px-5 text-center sm:px-8 lg:px-10">
         {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[var(--border-accent)] bg-emerald-500/[0.08] text-[var(--accent-emerald-light)] text-xs font-medium mb-8"
+          className="mb-7 inline-flex min-h-12 items-center gap-2.5 rounded-full border border-[var(--border-accent)] bg-emerald-500/[0.08] pl-6 pr-5 py-2.5 text-xs font-medium leading-normal text-[var(--accent-emerald-light)] shadow-[0_10px_30px_rgba(16,185,129,0.12)] sm:mb-8 sm:pl-7 sm:pr-6 sm:py-3 sm:text-sm"
         >
-          <Sparkles size={14} />
+          <Sparkles size={14} className="shrink-0" />
           <span>Solution Provider • Abidjan, Côte d&apos;Ivoire</span>
         </motion.div>
 
@@ -46,7 +46,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight mb-6"
+          className="mb-6 text-4xl font-bold leading-[0.95] tracking-tight m sm:mb-7 sm:text-5xl md:text-6xl lg:text-7xl"
         >
           <span className="gradient-text">{t.hero.headline}</span>
         </motion.h1>
@@ -56,7 +56,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.5 }}
-          className="text-base sm:text-lg md:text-xl text-[var(--text-secondary)] max-w-[700px] mx-auto mb-10 leading-relaxed"
+          className="mx-auto mb-8 max-w-[760px] text-base leading-relaxed text-[var(--text-secondary)] sm:mb-10 sm:text-lg md:text-xl"
         >
           {t.hero.subheadline}
         </motion.p>
@@ -66,23 +66,23 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.7 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="mt-4 flex flex-col items-stretch justify-center gap-4 sm:flex-row sm:items-center sm:gap-5"
         >
           <a
             href="#projects"
-            className="group relative inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm text-white overflow-hidden transition-all duration-300 glow-emerald-hover"
+            className="group relative inline-flex min-h-14 items-center justify-center gap-2.5 overflow-hidden rounded-full pl-7 pr-6 py-3.5 text-base font-semibold leading-normal text-white transition-all duration-300 glow-emerald-hover sm:min-h-16 sm:pl-9 sm:pr-8 sm:py-4 sm:text-lg"
             style={{ background: "var(--gradient-emerald)" }}
           >
             <span className="relative z-10">{t.hero.cta}</span>
             <ArrowDown
-              size={16}
+              size={20}
               className="relative z-10 transition-transform group-hover:translate-y-1"
             />
             <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm text-[var(--text-secondary)] border border-[var(--border-subtle)] hover:border-[var(--border-accent)] hover:text-[var(--accent-emerald-light)] transition-all duration-300 bg-white/[0.02] hover:bg-white/[0.05]"
+            className="inline-flex min-h-14 items-center justify-center gap-2.5 rounded-full border border-[var(--border-subtle)] bg-white/[0.02] pl-7 pr-6 py-3.5 text-base font-semibold leading-normal text-[var(--text-secondary)] transition-all duration-300 hover:border-[var(--border-accent)] hover:bg-white/[0.05] hover:text-[var(--accent-emerald-light)] sm:min-h-16 sm:pl-9 sm:pr-8 sm:py-4 sm:text-lg"
           >
             {t.hero.ctaSecondary}
           </a>

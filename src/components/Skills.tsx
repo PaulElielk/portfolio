@@ -106,13 +106,13 @@ export function Skills() {
           viewport={{ once: true, margin: "-100px" }}
           variants={fadeInUp}
           custom={2}
-          className="text-[var(--text-secondary)] max-w-[600px] mb-12 text-sm sm:text-base"
+          className="mb-10 max-w-[600px] text-sm text-[var(--text-secondary)] sm:text-base"
         >
           {t.skills.subtitle}
         </motion.p>
 
         {/* Skills Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
           {categories.map((category, catIndex) => (
             <motion.div
               key={category.title}
@@ -121,7 +121,7 @@ export function Skills() {
               viewport={{ once: true, margin: "-100px" }}
               variants={fadeInUp}
               custom={catIndex + 3}
-              className="glass-card rounded-2xl p-6 relative overflow-hidden group"
+              className="glass-card group relative h-full overflow-hidden rounded-[1.75rem] p-6 sm:p-8 box-border"
             >
               {/* Background gradient */}
               <div
@@ -129,7 +129,7 @@ export function Skills() {
               />
 
               <div className="relative z-10">
-                <h3 className="text-lg font-semibold mb-5 text-[var(--text-primary)]">
+                <h3 className="mb-6 text-xl font-semibold text-[var(--text-primary)]">
                   {category.title}
                 </h3>
 
@@ -137,15 +137,15 @@ export function Skills() {
                   {category.skills.map((skill) => (
                     <div
                       key={skill.name}
-                      className="flex items-center gap-3 text-[var(--text-secondary)] group/skill hover:text-[var(--text-primary)] transition-colors"
+                      className="group/skill flex items-center gap-3.5 rounded-2xl bg-white/[0.02] px-4 py-3 text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)] box-border"
                     >
-                      <div className="w-8 h-8 rounded-lg bg-white/[0.04] flex items-center justify-center group-hover/skill:bg-white/[0.08] transition-colors">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/[0.04] transition-colors group-hover/skill:bg-white/[0.08]">
                         <skill.icon
-                          size={16}
+                          size={18}
                           className="text-[var(--accent-emerald)] opacity-70 group-hover/skill:opacity-100 transition-opacity"
                         />
                       </div>
-                      <span className="text-sm font-medium">{skill.name}</span>
+                      <span className="text-sm font-medium sm:text-[0.95rem]">{skill.name}</span>
                     </div>
                   ))}
                 </div>
