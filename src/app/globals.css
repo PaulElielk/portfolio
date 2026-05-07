@@ -54,6 +54,9 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
+  overflow-x: hidden;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 body {
@@ -63,6 +66,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 /* ========================================
@@ -140,8 +145,10 @@ body {
    ======================================== */
 .section-container {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 4.75rem 1.25rem;
+  box-sizing: border-box;
 }
 
 @media (min-width: 640px) {
@@ -226,4 +233,29 @@ body {
 .tech-badge:hover {
   background: rgba(16, 185, 129, 0.2);
   border-color: rgba(16, 185, 129, 0.3);
+}
+
+/* ========================================
+   PROJECT CTA BUTTON
+   ======================================== */
+.project-cta-btn {
+  display: block;
+  width: 100%;
+  padding: 0.875rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(135deg, #10b981, #059669);
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background 0.25s ease, box-shadow 0.25s ease;
+  text-decoration: none;
+}
+
+.project-cta-btn:hover {
+  background: linear-gradient(135deg, #34d399, #10b981);
+  box-shadow: 0 0 24px rgba(16, 185, 129, 0.45);
 }

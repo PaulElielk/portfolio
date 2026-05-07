@@ -40,8 +40,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${inter.variable} h-full`}>
-      <body className="min-h-full flex flex-col noise-overlay">{children}</body>
+    <html lang="fr" className={`${inter.variable} h-full overflow-x-hidden`}>
+      <body className="min-h-full flex flex-col noise-overlay overflow-x-hidden max-w-full box-border">{children}</body>
     </html>
   );
 }
